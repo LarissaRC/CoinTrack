@@ -1,12 +1,8 @@
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import React from 'react'
 
-const MonthsList = ({ navigation }) => {
+const MonthsList = ({ handleMonthPress }) => {
     const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-
-    const handleMonthPress = (month) => {
-        navigation.navigate('MonthlyExpenses');
-    };
     
     return (
         <ScrollView>
@@ -14,7 +10,7 @@ const MonthsList = ({ navigation }) => {
                 {months.map((month, index) => (
                 <TouchableOpacity
                     key={index}
-                    onPress={() => handleMonthPress(month)}
+                    onPress={handleMonthPress}
                     style={{ flex: 1, width: '100%'}}>
                     <View style={styles.monthItem}>
                         <Text style={{ marginLeft: 20}}>{month}</Text>

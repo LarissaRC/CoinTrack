@@ -7,6 +7,10 @@ const HomeScreen = ({ navigation }) => {
   var totalSpent = 320, maxToSpent = 1000;
   const progress = (totalSpent / maxToSpent) * 100;
 
+  const handleMonthPress = (month) => {
+    navigation.navigate('MonthlyExpenses');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header_container}>
@@ -31,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
 
         <View style={{ flex: 1, width: '100%'}}>
           <Text style={styles.month_list_text}>Despesas do ano</Text>
-          <MonthsList />
+          <MonthsList handleMonthPress={handleMonthPress} />
         </View>
         
     </View>
