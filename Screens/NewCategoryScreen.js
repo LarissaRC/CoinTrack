@@ -5,7 +5,7 @@ import DescriptionForm from '../Components/Forms/DescriptionForm'
 import ConclusionForm from '../Components/Forms/ConclusionForm'
 import SelectionForm from '../Components/Forms/SelectionForm'
 
-const NewCategoryScreen = ({ navigation }) => {
+const NewCategoryScreen = () => {
 
   const categories = ["Vermelho", "Azul", "Verde", "Amarelo", "Laranja", "Roxo", "Ciano"];
 

@@ -7,6 +7,7 @@ import ExpensesReportScreen from "../Screens/ExpensesReportScreen";
 import CategoryManagerScreen from "../Screens/CategoryManagerScreen";
 import AddExpenseScreen from "../Screens/AddExpenseScreen";
 import NewCategoryScreen from "../Screens/NewCategoryScreen";
+import ReportChartScreen from "../Screens/ReportChartScreen";
 
 
 const Stack = createStackNavigator();
@@ -28,6 +29,7 @@ const MainStackNavigator = () => {
       <Stack.Screen name="CategoryManagerScreen" component={CategoryManagerScreen} />
       <Stack.Screen name="AddExpenseScreen" component={AddExpenseScreen} />
       <Stack.Screen name="NewCategoryScreen" component={NewCategoryScreen} />
+      <Stack.Screen name="ReportChartScreen" component={ReportChartScreen} />
     </Stack.Navigator>
   );
 }
