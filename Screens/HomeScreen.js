@@ -17,6 +17,18 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate('MonthlyExpenses');
   };
 
+  const handleExpensesReport = () => {
+    navigation.navigate('ExpensesReportScreen'); // Navega para a tela de registro de gastos
+  };
+
+  const handleCategoryManager = () => {
+    navigation.navigate('CategoryManagerScreen');
+  }
+
+  const handleAddExpense = () => {
+    navigation.navigate('AddExpenseScreen');
+  }
+
   return (
     <Provider>
       <View style={styles.container}>
@@ -25,11 +37,11 @@ const HomeScreen = ({ navigation }) => {
             visible={visible}
             onDismiss={closeMenu}
             anchor={<Button onPress={openMenu} title="Menu" color="#30024A"/>}>
-            <Menu.Item onPress={() => {}} title="Registrar gasto" />
+            <Menu.Item onPress={handleAddExpense} title="Registrar gasto" />
             <Divider />
-            <Menu.Item onPress={() => {}} title="Criar categoria" />
+            <Menu.Item onPress={handleCategoryManager} title="Criar categoria" />
             <Divider />
-            <Menu.Item onPress={() => {}} title="Reportar gastos" />
+            <Menu.Item onPress={handleExpensesReport} title="Reportar gastos" />
           </Menu>
           </View>
         <View style={styles.header_container}>
