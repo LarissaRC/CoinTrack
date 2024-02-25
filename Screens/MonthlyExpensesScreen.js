@@ -17,6 +17,7 @@ const MonthlyExpensesScreen = () => {
                 <Text style={styles.header_text}>Filtrar por categoria</Text>
                 <SelectDropdown
                     data={categories}
+                    defaultButtonText=" "
                     onSelect={(selectedItem, index) => {
                         console.log(selectedItem, index)
                     }}

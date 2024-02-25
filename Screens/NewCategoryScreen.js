@@ -1,27 +1,27 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import SimpleForm from '../Components/Forms/SimpleForm'
-import DateForm from '../Components/Forms/DateForm'
 import DescriptionForm from '../Components/Forms/DescriptionForm'
 import ConclusionForm from '../Components/Forms/ConclusionForm'
 import SelectionForm from '../Components/Forms/SelectionForm'
 
-const AddExpenseScreen = ({ navigation }) => {
+const NewCategoryScreen = ({ navigation }) => {
 
-  const categories = ["Todos", "Alimentação", "Transporte", "Compras"];
+  const categories = ["Vermelho", "Azul", "Verde", "Amarelo", "Laranja", "Roxo", "Ciano"];
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Registrar Gasto</Text>
+      <Text style={styles.title}>Nova Categoria</Text>
       <View style={{width: "90%", alignItems: 'center'}}>
-      <SelectionForm formTitle={'Selecione a Categoria'} data={categories} />
-      <SimpleForm formTitle={'Título do Gasto'}/>
-      <DateForm formTitle={'Data'}/>
-      <SimpleForm formTitle={'Local'}/>
-      <SimpleForm formTitle={'Valor'}/>
+      <SimpleForm formTitle={'Nome'}/>
+      <SelectionForm formTitle={'Cor'} data={categories} />
       <DescriptionForm formTitle={'Descrição'}/>
-      <ConclusionForm/>  
+
       </View>
+      <View style={{width: "90%", alignItems: 'center', marginTop: "50%"}}>
+        <ConclusionForm/>
+      </View>
+      
       </View>
   )
 }
@@ -41,4 +41,4 @@ title: {
 },
 });
 
-export default AddExpenseScreen;
+export default NewCategoryScreen;

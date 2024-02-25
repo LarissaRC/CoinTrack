@@ -21,12 +21,12 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate('ExpensesReportScreen'); // Navega para a tela de registro de gastos
   };
 
-  const handleCategoryManager = () => {
-    navigation.navigate('CategoryManagerScreen');
-  }
-
   const handleAddExpense = () => {
     navigation.navigate('AddExpenseScreen');
+  }
+
+  const handleNewCategory = () => {
+    navigation.navigate('NewCategoryScreen');
   }
 
   return (
@@ -39,7 +39,7 @@ const HomeScreen = ({ navigation }) => {
             anchor={<Button onPress={openMenu} title="Menu" color="#30024A"/>}>
             <Menu.Item onPress={handleAddExpense} title="Registrar gasto" />
             <Divider />
-            <Menu.Item onPress={handleCategoryManager} title="Criar categoria" />
+            <Menu.Item onPress={handleNewCategory} title="Criar categoria" />
             <Divider />
             <Menu.Item onPress={handleExpensesReport} title="Reportar gastos" />
           </Menu>
