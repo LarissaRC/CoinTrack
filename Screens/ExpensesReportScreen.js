@@ -3,11 +3,11 @@ import { View, Text, Button, StyleSheet, ProgressBarAndroid } from 'react-native
 import { Menu, Divider, Provider } from 'react-native-paper';
 import MonthsList from '../Components/Home/MonthsList';
 
-const ExpensesReportScreen = () => {
+const ExpensesReportScreen = ({ navigation }) => {
   const [visible, setVisible] = useState(false);
 
   const handleMonthPress = (month) => {
-    navigation.navigate('MonthlyExpenses');
+    navigation.navigate('ReportChartScreen');
   };
 
 

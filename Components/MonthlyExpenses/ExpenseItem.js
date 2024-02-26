@@ -1,12 +1,12 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const ExpenseItem = ({expenseTitle, expenseValue}) => {
+const ExpenseItem = ({expenseTitle, expenseValue, handleExpensePress}) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.texts}>{expenseTitle}</Text>
-      <Text style={styles.texts}>R${expenseValue}</Text>
-    </View>
+    <TouchableOpacity style={styles.container} onPress={handleExpensePress}>
+    <Text style={styles.texts}>{expenseTitle}</Text>
+    <Text style={styles.texts}>R${expenseValue}</Text>
+  </TouchableOpacity>
   )
 }
 

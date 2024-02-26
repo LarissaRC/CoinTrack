@@ -5,7 +5,12 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import ExpenseItem from '../Components/MonthlyExpenses/ExpenseItem';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const MonthlyExpensesScreen = () => {
+const MonthlyExpensesScreen = ({navigation}) => {
+
+    const handleExpensePress = () => {
+        navigation.navigate('ExpenseDescriptionScreen');
+      };
+    
     
     const categories = ["Todos", "Alimentação", "Transporte", "Compras"];
 
@@ -43,19 +48,19 @@ const MonthlyExpensesScreen = () => {
                 showsVerticalScrollIndicator={false}
             >
                 <View style={{width: "100%", alignItems: 'center'}}>
-                    <ExpenseItem expenseTitle={'Almoço'} expenseValue={1.8} />
-                    <ExpenseItem expenseTitle={'Ônibus'} expenseValue={4.5} />
-                    <ExpenseItem expenseTitle={'Lanche'} expenseValue={5} />
-                    <ExpenseItem expenseTitle={'Conta do celular'} expenseValue={54.9} />
-                    <ExpenseItem expenseTitle={'Brigadeiro'} expenseValue={3} />
-                    <ExpenseItem expenseTitle={'Steam'} expenseValue={10.9} />
-                    <ExpenseItem expenseTitle={'Rodízio'} expenseValue={44} />
-                    <ExpenseItem expenseTitle={'Recarga'} expenseValue={100} />
-                    <ExpenseItem expenseTitle={'Ração do cachorro'} expenseValue={30} />
-                    <ExpenseItem expenseTitle={'Uber'} expenseValue={12.8} />
-                    <ExpenseItem expenseTitle={'Lazer'} expenseValue={120} />
-                    <ExpenseItem expenseTitle={'Janta'} expenseValue={1.8} />
-                    <ExpenseItem expenseTitle={'Dívida com colega'} expenseValue={5} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Almoço'} expenseValue={1.8} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Ônibus'} expenseValue={4.5} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Lanche'} expenseValue={5} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Conta do celular'} expenseValue={54.9} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Brigadeiro'} expenseValue={3} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Steam'} expenseValue={10.9} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Rodízio'} expenseValue={44} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Recarga'} expenseValue={100} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Ração do cachorro'} expenseValue={30} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Uber'} expenseValue={12.8} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Lazer'} expenseValue={120} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Janta'} expenseValue={1.8} />
+                    <ExpenseItem handleExpensePress={handleExpensePress}  expenseTitle={'Dívida com colega'} expenseValue={5} />
                 </View>
             </ScrollView>
         </View>

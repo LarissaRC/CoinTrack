@@ -18,7 +18,7 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const handleExpensesReport = () => {
-    navigation.navigate('ReportChartScreen'); // Navega para a tela de registro de gastos
+    navigation.navigate('ExpensesReportScreen'); 
   };
 
   const handleAddExpense = () => {
