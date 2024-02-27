@@ -22,6 +22,7 @@ const MainStackNavigator = () => {
             },
             headerTintColor: "#30024A",
             headerBackTitle: "Back",
+            headerTitle: '',
         }}
     >
       <Stack.Screen name="Home" component={HomeScreen} />
