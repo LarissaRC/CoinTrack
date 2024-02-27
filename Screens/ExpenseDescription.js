@@ -15,10 +15,10 @@ const AddExpenseScreen = () => {
       <View style={{width: "90%", alignItems: 'center'}}>
       <SimpleForm formTitle={'Alimentação'}/>
       <SimpleForm formTitle={'Almoço no shopping'}/>
-      <DateForm formTitle={'Data'}/>
+      <DateForm formTitle={'26/02/2024'}/>
       <SimpleForm formTitle={'Amazonas Shopping'}/>
-      <SimpleForm formTitle={'25 e algo'}/>
-      <DescriptionForm formTitle={'aaaaa'}/>
+      <SimpleForm formTitle={'R$ 20,90'}/>
+      <DescriptionForm formTitle={'Almoço na Spoletto. Saí do trabalho pra almoçar fora.'}/>
       <ConclusionForm/>  
       </View>
       </View>

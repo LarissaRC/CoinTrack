@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 
-const DescriptionForm = () => {
+const DescriptionForm = ({formTitle}) => {
   const [text, setText] = useState('');
 
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Descrição"
+        placeholder={formTitle}
         placeholderTextColor="#9FB5C8"
         onChangeText={setText}
         value={text}
